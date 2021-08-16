@@ -1,4 +1,3 @@
-import type { Agent } from "http DENOIFY: DEPENDENCY UNMET (BUILTIN)"
 import {
   Logger,
   LogLevel,
@@ -59,11 +58,11 @@ import {
   DatabasesUpdateParameters,
   DatabasesUpdateResponse,
 } from "./api-endpoints.ts"
-import {
-  version as PACKAGE_VERSION,
-  name as PACKAGE_NAME,
-} from "../package.json"
 import { SupportedFetch } from "./fetch-types.ts"
+
+type Agent = any
+const PACKAGE_NAME = "@notionhq/client"
+const PACKAGE_VERSION = "0.2.4"
 
 export interface ClientOptions {
   auth?: string
