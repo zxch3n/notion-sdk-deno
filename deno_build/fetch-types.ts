@@ -1,6 +1,6 @@
 /// <reference lib="dom" />
-import { Agent } from "http"
-import type { Assert, Await } from "./type-utils"
+import { Agent } from "http DENOIFY: DEPENDENCY UNMET (BUILTIN)"
+import type { Assert, Await } from "./type-utils.ts"
 export interface NodeRequestInit {
   // whatwg/fetch standard options
   body?: BodyInit | undefined

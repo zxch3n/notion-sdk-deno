@@ -1,17 +1,17 @@
-import type { Agent } from "http"
+import type { Agent } from "http DENOIFY: DEPENDENCY UNMET (BUILTIN)"
 import {
   Logger,
   LogLevel,
   logLevelSeverity,
   makeConsoleLogger,
-} from "./logging"
+} from "./logging.ts"
 import {
   buildRequestError,
   isHTTPResponseError,
   isNotionClientError,
   RequestTimeoutError,
-} from "./errors"
-import { pick } from "./helpers"
+} from "./errors.ts"
+import { pick } from "./helpers.ts"
 import {
   BlocksChildrenAppendParameters,
   BlocksChildrenAppendResponse,
@@ -58,12 +58,12 @@ import {
   databasesUpdate,
   DatabasesUpdateParameters,
   DatabasesUpdateResponse,
-} from "./api-endpoints"
+} from "./api-endpoints.ts"
 import {
   version as PACKAGE_VERSION,
   name as PACKAGE_NAME,
 } from "../package.json"
-import { SupportedFetch } from "./fetch-types"
+import { SupportedFetch } from "./fetch-types.ts"
 
 export interface ClientOptions {
   auth?: string
