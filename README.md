@@ -1,19 +1,10 @@
 <div align="center">
-	<h1>Notion SDK for JavaScript</h1>
+	<h1>Notion SDK for Deno</h1>
 	<p>
 		<b>A simple and easy to use client for the <a href="https://developers.notion.com">Notion API</a></b>
 	</p>
 	<br>
 </div>
-
-![Build status](https://github.com/makenotion/notion-sdk-js/actions/workflows/ci.yml/badge.svg)
-[![npm version](https://badge.fury.io/js/%40notionhq%2Fclient.svg)](https://www.npmjs.com/package/@notionhq/client)
-
-## Installation
-
-```
-npm install @notionhq/client
-```
 
 ## Usage
 
@@ -22,7 +13,7 @@ npm install @notionhq/client
 Import and initialize a client using an **integration token** or an OAuth **access token**.
 
 ```js
-const { Client } = require("@notionhq/client")
+import { Client } from "https://github.com/zxch3n/notion-sdk-js/raw/v0.2.3-deno/deno_build/index.ts";
 
 // Initializing a client
 const notion = new Client({
@@ -85,7 +76,7 @@ If the API returns an unsuccessful response, the returned `Promise` rejects with
 The error contains properties from the response, and the most helpful is `code`. You can compare `code` to the values in the `APIErrorCode` object to avoid misspelling error codes.
 
 ```js
-const { Client, APIErrorCode } = require("@notionhq/client")
+import { Client, APIErrorCode } from "https://github.com/zxch3n/notion-sdk-js/raw/v0.2.3-deno/deno_build/index.ts";
 
 try {
   const myPage = await notion.databases.query({
@@ -116,7 +107,7 @@ The client emits useful information to a logger. By default, it only emits warni
 If you're debugging an application, and would like the client to log response bodies, set the `logLevel` option to `LogLevel.DEBUG`.
 
 ```js
-const { Client, LogLevel } = require("@notionhq/client")
+import { Client, LogLevel } from "https://github.com/zxch3n/notion-sdk-js/raw/v0.2.3-deno/deno_build/index.ts";
 
 const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -175,15 +166,6 @@ try {
   }
 }
 ```
-
-## Requirements
-
-This package supports the following minimum versions:
-
-- Runtime: `node >= 12`
-- Type definitions (optional): `typescript >= 4.2`
-
-Earlier versions may still work, but we encourage people building new applications to upgrade to the current stable.
 
 ## Getting help
 
